@@ -3,3 +3,4 @@
 
 ##目录
 >* [排序算法训练](https://github.com/XINCGer/AlgorithmTraining/tree/master/sort)
+>* [栈&队列&链表](https://github.com/XINCGer/AlgorithmTraining/tree/master/stack%26queue%26linklist)
