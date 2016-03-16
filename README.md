@@ -9,3 +9,4 @@
 >* [搜索算法训练](https://github.com/XINCGer/AlgorithmTraining/tree/master/SearchTraining)
 >* [图的遍历](https://github.com/XINCGer/AlgorithmTraining/tree/master/Graph_traversal)
 >* [最短路径](https://github.com/XINCGer/AlgorithmTraining/tree/master/shortest_path)
+>* [树](https://github.com/XINCGer/AlgorithmTraining/tree/master/tree)
