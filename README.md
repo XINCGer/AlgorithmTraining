@@ -1,5 +1,5 @@
 # AlgorithmTraining
-《啊哈算法》中的算法。
+算法训练，包括《啊哈算法》中的算法和常用游戏算法。
 
 ##目录
 >* [排序算法训练](https://github.com/XINCGer/AlgorithmTraining/tree/master/sort)
