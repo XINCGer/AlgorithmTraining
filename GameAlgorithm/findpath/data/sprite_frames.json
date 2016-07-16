@@ -1,0 +1,14 @@
+{			           
+	"bar":{
+	  "type":0,
+	  "img":"bar1"
+	},
+	"bul0":{
+	  "type":0,
+	  "img":"bul0"
+	},
+	"bul1":{
+	  "type":0,
+	  "img":"bul1"
+	}
+}

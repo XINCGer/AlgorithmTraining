@@ -1,0 +1,12 @@
+{
+  "image":
+	[		  
+	   {"name":"bar1","src":"../../imgs/bar1.png"},       
+	   {"name":"bul0","src":"../../imgs/bul0.png"},
+	   {"name":"bul1","src":"../../imgs/bul1.png"}
+	], 
+  "frame":         
+	[
+	  {"name":"sprite","src":"data/sprite_frames.json"}
+	]
+}
