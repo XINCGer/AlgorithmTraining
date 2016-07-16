@@ -10,4 +10,5 @@
 >* [图的遍历](https://github.com/XINCGer/AlgorithmTraining/tree/master/Graph_traversal)
 >* [最短路径](https://github.com/XINCGer/AlgorithmTraining/tree/master/shortest_path)
 >* [树](https://github.com/XINCGer/AlgorithmTraining/tree/master/tree)
->* [更多其他算法](https://github.com/XINCGer/AlgorithmTraining/tree/master/Morepractices)
+>* [更多其他算法](https://github.com/XINCGer/AlgorithmTraining/tree/master/Morepractices)  
+>* [游戏常用算法](https://github.com/XINCGer/AlgorithmTraining/tree/master/GameAlgorithm)
