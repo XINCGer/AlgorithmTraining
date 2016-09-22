@@ -24,6 +24,7 @@ public:
     void Insert(int i,T x);  //在第i个位置插入x
     T Delete(int i);        //删除第i个节点
     void PrintList();       //遍历链表
+    void ReverseList();     //链表逆置
 private:
     Node<T> *first;     //头指针
 };
@@ -36,35 +37,35 @@ LinkList<T>::LinkList()
 }
 
 //头插法
-//template<class T>
-//LinkList<T>::LinkList(T a[],int n)
-//{
-//    first=new Node<T>();
-//    first->next=NULL;
-//    Node<T> *s;
-//    for(int i=0;i<n;i++){
-//        s=new Node<T>();
-//        s->data=a[i];
-//        s->next=first->next;
-//        first->next=s;
-//    }
-//}
-
-//尾插法
 template<class T>
 LinkList<T>::LinkList(T a[],int n)
 {
     first=new Node<T>();
-    Node<T> *r=first;    //尾指针初始化
+    first->next=NULL;
     Node<T> *s;
     for(int i=0;i<n;i++){
         s=new Node<T>();
         s->data=a[i];
-        r->next=s;
-        r=s;
+        s->next=first->next;
+        first->next=s;
     }
-    r->next=NULL;
 }
+
+//尾插法
+//template<class T>
+//LinkList<T>::LinkList(T a[],int n)
+//{
+//    first=new Node<T>();
+//    Node<T> *r=first;    //尾指针初始化
+//    Node<T> *s;
+//    for(int i=0;i<n;i++){
+//        s=new Node<T>();
+//        s->data=a[i];
+//        r->next=s;
+//        r=s;
+//    }
+//    r->next=NULL;
+//}
 
 template<class T>
 LinkList<T>::~LinkList()
@@ -164,12 +165,44 @@ T LinkList<T>::Delete(int i){
     }
 }
 
+//template<class T>
+//void LinkList<T>::ReverseList(){
+//    if(first==NULL||first->next==NULL)return;
+//        Node<T> *p, *q;
+//    p = first->next;    //P指向链表第一个元素
+//    first->next = NULL; //断开头结点与链表
+//    while(p != NULL)
+//    {
+//        q = p;
+//        p = p->next;
+//        q->next = first->next;  //相当于前插法构建新的链表，和原来的相反
+//        first->next = q;
+//    }
+//}
+
+template<class T>
+void LinkList<T>::ReverseList(){
+    if(first==NULL||first->next==NULL)return;
+    Node<T> *pre=first;
+    Node<T> *cur=pre->next;
+    Node<T> *next=NULL;
+    Node<T> *cur1=cur;
+    while(cur!=NULL){
+        next=cur->next;
+        cur->next=pre;
+        pre=cur;
+        cur=next;
+    }
+    first->next=pre;
+    cur1->next=NULL;
+}
+
 int main()
 {
     int a[]={1,2,3,4,5};
     LinkList<int> l(a,5);
     l.PrintList();
-    l.Insert(1,12);
+    l.ReverseList();
     l.PrintList();
     return 0;
 }
