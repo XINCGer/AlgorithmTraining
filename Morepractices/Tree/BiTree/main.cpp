@@ -37,6 +37,10 @@ void BiTree<T>::preOrder(Node<T> *bt){
         preOrder(bt->rchild);
     }
 }
+
+void BiTree<T>::inOrder(Node<T> *bt){
+
+}
 int main()
 {
     cout << "Hello world!" << endl;
