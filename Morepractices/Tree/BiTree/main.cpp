@@ -17,6 +17,9 @@ private:
     void preOrder(Node<T> *bt);     //前序遍历调用
     void inOrder(Node<T> *bt);      //中序遍历
     void postOrder(Node<T> *bt);    //后序遍历
+    void NRPreOrder(Node<T> *bt);    //非递归前序遍历
+    void NRInOrder(Node<T> *bt);    //非递归中序遍历
+    void NRPostOrder(Node<T> *bt); //非递归后序遍历
 
 public:
     BiTree(){root=create(root);}    //建立一棵二叉树
@@ -25,6 +28,9 @@ public:
     void inOrder(){inOrder(root);}      //中序遍历
     void postOrder(){postOrder(root);}  //  后序遍历
     void levelOrder();              //层序遍历
+    void NRPreOrder(){NRPreOrder(root);}    //非递归前序遍历
+    void NRInOrder(){NRInOrder(root);}      //非递归中序遍历
+    void NRPostOrder(){NRPostOrder(root);}  //非递归后序遍历
 };
 
 //递归方法实现前序遍历
@@ -76,6 +82,41 @@ void BiTree<T>::levelOrder(){
     }
 }
 
+//非递归前序遍历
+template <class T>
+void BiTree<T>::NRPreOrder(Node<T>* bt){
+    int top=-1; //初始化栈
+    Node<T> *s[maxn];
+    while(bt!=NULL || top !=-1){    //两个条件都不成立才退出循环
+        while(bt!=NULL){
+            cout<<bt->data<<" ";
+            s[++top]=bt;            //将根指针入栈
+            bt=bt->lchild;          //遍历左子树
+        }
+        if(top!=-1){                //栈非空
+            bt=s[top--];
+            bt=bt->rchild;          //遍历右子树
+        }
+    }
+}
+
+//非递归中序遍历
+template <class T>
+void BiTree<T>::NRInOrder(Node<T>* bt){
+    int top=-1;
+    Node<T>* s[maxn];
+    while(bt!=NULL || top!=-1){
+        while(bt!=NULL){
+            s[++top]=bt;
+            bt=bt->lchild;
+        }
+        if(top!=-1){
+            bt=s[top--];
+            cout<<bt->data<<" ";
+            bt=bt->rchild;
+        }
+    }
+}
 //建立二叉树
 template <class T>
 Node<T>* BiTree<T>::create(Node<T> *bt){
@@ -113,5 +154,12 @@ int main()
     cout<<endl;
     cout<<"层次遍历"<<endl;
     tree.levelOrder();
+    cout<<endl;
+    cout<<"非递归前序遍历"<<endl;
+    tree.NRPreOrder();
+    cout<<endl;
+    cout<<"非递归中序遍历"<<endl;
+    tree.NRInOrder();
+    cout<<endl;
     return 0;
 }
