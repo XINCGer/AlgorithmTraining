@@ -8,6 +8,13 @@ struct Node{
     Node<T> *lchild,*rchild;
 };
 
+//非递归后序遍历中用于标记的结构体
+template <class T>
+struct Element{
+    Node<T> *ptr;
+    int flag;
+};
+
 template<class T>
 class BiTree{
 private:
@@ -117,6 +124,30 @@ void BiTree<T>::NRInOrder(Node<T>* bt){
         }
     }
 }
+
+//非递归后序遍历二叉树
+template <class T>
+void BiTree<T>::NRPostOrder(Node<T>* bt){
+    int top=-1;
+    Element<T> s[maxn];
+    while(bt!=NULL || top!=-1){
+        while(bt!=NULL){
+            top++;
+            s[top].ptr=bt;
+            s[top].flag=1;
+            bt=bt->lchild;
+        }
+        while(top!=-1 && s[top].flag==2){
+            bt=s[top--].ptr;
+            cout<<bt->data<<" ";
+            if(top==-1)bt=NULL;
+        }
+        if(top!=-1){
+            s[top].flag=2;
+            bt=s[top].ptr->rchild;
+        }
+    }
+}
 //建立二叉树
 template <class T>
 Node<T>* BiTree<T>::create(Node<T> *bt){
@@ -161,5 +192,7 @@ int main()
     cout<<"非递归中序遍历"<<endl;
     tree.NRInOrder();
     cout<<endl;
+    cout<<"非递归后序遍历"<<endl;
+    tree.NRPostOrder();
     return 0;
 }
