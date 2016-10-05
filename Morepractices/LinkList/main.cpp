@@ -202,6 +202,9 @@ int main()
     int a[]={1,2,3,4,5};
     LinkList<int> l(a,5);
     l.PrintList();
+    cout<<endl;
+    cout<<l.Length()<<endl;
+    cout<<endl;
     l.ReverseList();
     l.PrintList();
     return 0;
