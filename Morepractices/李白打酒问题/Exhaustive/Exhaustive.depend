@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1489891411 source:f:\github_project\algorithmtraining\morepractices\李白打酒问题\exhaustive\main.cpp
+	<iostream>
+	<algorithm>
+	<string>
+
