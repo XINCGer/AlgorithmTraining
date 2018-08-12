@@ -13,4 +13,5 @@
 >* [更多其他算法](https://github.com/XINCGer/AlgorithmTraining/tree/master/Morepractices)  
 >* [游戏常用算法](https://github.com/XINCGer/AlgorithmTraining/tree/master/GameAlgorithm)  
 >* [LeetCode刷题记录](./leetcode)  
->* [每个程序员都应该收藏的算法复杂度速查表](https://linux.cn/article-7480-1.html)  
+>* [每个程序员都应该收藏的算法复杂度速查表](https://linux.cn/article-7480-1.html)    
+>* [编程之法面试和算法心得](./编程之法面试和算法心得)  
