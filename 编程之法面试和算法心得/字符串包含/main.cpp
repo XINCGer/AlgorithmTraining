@@ -41,27 +41,48 @@ bool StringContainWithSort(string &a,string &b)
 }
 
 //素数相乘，会溢出,前16个相乘便会超出loglong范围 O(m+n)
-bool StringContainPrime(string &a,string &b){
-    const int p[26]={2,3,5,7,11,13,17,19,23,29,31,37,41,43,
-    47,53,59,61,67,72,73,79,83,89,97,101};
+bool StringContainPrime(string &a,string &b)
+{
+    const int p[26]= {2,3,5,7,11,13,17,19,23,29,31,37,41,43,
+                      47,53,59,61,67,72,73,79,83,89,97,101
+                     };
     int f = 1;
-    for(int i=0;i<a.size();++i){
+    for(int i=0; i<a.size(); ++i)
+    {
         int x = p[a[i]-'A'];
-        if(f%x){
+        if(f%x)
+        {
             f*=x;
         }
     }
-    for(int i=0;i<b.size();++i){
+    for(int i=0; i<b.size(); ++i)
+    {
         int x= p[b[i]-'A'];
-        if(f%x){
+        if(f%x)
+        {
             return false;
         }
     }
     return true;
 }
 
-//
-bool StringContainHash()
+//散列表求解 时间复杂度O(m+n),空间O(1)
+bool StringContainHash(string &a,string &b)
+{
+    int _hash = 0;
+    for(int i=0; i<a.size(); ++i)
+    {
+        _hash |=(1<<(a[i]-'A'));
+    }
+    for(int i=0; i<b.size(); ++i)
+    {
+        if((_hash &(1<<(b[i]-'A'))) == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
 
 int main()
 {
@@ -80,5 +101,9 @@ int main()
     cout<<StringContainPrime(a,b)<<endl;
     cout<<StringContainPrime(a,c)<<endl;
     cout<<StringContainPrime(a,d)<<endl;
+    cout<<"---------------"<<endl;
+    cout<<StringContainHash(a,b)<<endl;
+    cout<<StringContainHash(a,c)<<endl;
+    cout<<StringContainHash(a,d)<<endl;
     return 0;
 }
