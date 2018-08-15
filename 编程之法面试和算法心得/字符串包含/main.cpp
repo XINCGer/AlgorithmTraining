@@ -40,6 +40,29 @@ bool StringContainWithSort(string &a,string &b)
     return true;
 }
 
+//素数相乘，会溢出,前16个相乘便会超出loglong范围 O(m+n)
+bool StringContainPrime(string &a,string &b){
+    const int p[26]={2,3,5,7,11,13,17,19,23,29,31,37,41,43,
+    47,53,59,61,67,72,73,79,83,89,97,101};
+    int f = 1;
+    for(int i=0;i<a.size();++i){
+        int x = p[a[i]-'A'];
+        if(f%x){
+            f*=x;
+        }
+    }
+    for(int i=0;i<b.size();++i){
+        int x= p[b[i]-'A'];
+        if(f%x){
+            return false;
+        }
+    }
+    return true;
+}
+
+//
+bool StringContainHash()
+
 int main()
 {
     string a = "ABCD";
@@ -53,5 +76,9 @@ int main()
     cout<<StringContainWithSort(a,b)<<endl;
     cout<<StringContainWithSort(a,c)<<endl;
     cout<<StringContainWithSort(a,d)<<endl;
+    cout<<"---------------"<<endl;
+    cout<<StringContainPrime(a,b)<<endl;
+    cout<<StringContainPrime(a,c)<<endl;
+    cout<<StringContainPrime(a,d)<<endl;
     return 0;
 }
