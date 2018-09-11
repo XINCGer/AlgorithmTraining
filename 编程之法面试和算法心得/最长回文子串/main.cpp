@@ -36,6 +36,27 @@ int LongestPalindrome(const string& s){
     }
     return mmax;
 }
+void Manacher(){
+    int i;
+    int mx =0;
+    int id;
+    for(i =1;i<n;i++){
+        //mx > iÊ±£¬p[i] >= Min(p[2*id-i],mx-i)
+        if(mx>i){
+            p[i] = min(p[2*id-i],mx-i);
+        }
+        else{
+            p[i] =1;
+        }
+        while(s[i+p[i] == s[i-p[i]){
+            p[i]++;
+        }
+        if(p[i]+i > mx){
+            mx = p[i]+i;
+            id = i;
+        }
+    }
+}
 
 int main()
 {
