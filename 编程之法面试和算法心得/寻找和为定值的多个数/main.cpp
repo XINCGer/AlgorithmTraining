@@ -14,7 +14,7 @@ void SumOfKNumber(int sum,int n){
     //输出找到的结果
     if(sum == n){
         //反转List
-        list1.reverse()
+        list1.reverse();
         for(list<int>::iterator it = list1.begin();it!=list1.end();it++){
             cout<<*it<<" + ";
         }
@@ -29,5 +29,6 @@ void SumOfKNumber(int sum,int n){
 
 int main()
 {
+    SumOfKNumber(32,20);
     return 0;
 }
