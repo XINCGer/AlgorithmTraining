@@ -28,6 +28,26 @@ int MaxSubArray(vector<int> a)
     return maxSum;
 }
 
+//动态规划 DP 状态转移方程
+int MaxSubArrayDP(vector<int> a)
+{
+    int curSum =0;
+    int maxSum = a[0]; //数组全为负的情况下
+    int n= a.size();
+    for(int j =0;j<n;j++){
+        if(curSum >= 0){
+            curSum += a[j];
+        }
+        else{
+            curSum = a[j];
+        }
+        if(curSum >maxSum){
+            maxSum = curSum;
+        }
+    }
+    return maxSum;
+}
+
 int main()
 {
     vector<int> v;
@@ -40,5 +60,6 @@ int main()
     v.push_back(2);
     v.push_back(-5);
     cout<<MaxSubArray(v)<<endl;
+    cout<<MaxSubArrayDP(v)<<endl;
     return 0;
 }
