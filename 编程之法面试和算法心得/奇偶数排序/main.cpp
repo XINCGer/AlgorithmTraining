@@ -35,6 +35,18 @@ void OddEvrnSort1(vector<int> & v)
     }
 }
 
+void OddEvrnSort2(vector<int> & v,int low,int hight){
+    int i = low - 1;
+    for(int j = low;j<hight;j++){
+        //指向奇数的话，交换
+        if(isOddNumber(v[j])){
+            i = i+1;
+            swap(v[i],v[j]);
+        }
+        swap(v[i+1],v[hight]);
+    }
+}
+
 int main()
 {
     vector<int> v;
@@ -45,7 +57,7 @@ int main()
     v.push_back(0);
     v.push_back(3);
     v.push_back(8);
-    OddEvrnSort1(v);
+    OddEvrnSort2(v,0,v.size()-1);
 
     for(int i=0; i<v.size(); i++)
     {
