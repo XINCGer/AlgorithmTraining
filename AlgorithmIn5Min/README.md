@@ -2,6 +2,7 @@
 
 ### 简介  
 博主通过动图和浅显易懂的语言，阐释了常用的各种数据结构和算法，值得一看~  
+[Github项目地址](https://github.com/MisterBooo/LeetCodeAnimation)  
 [博主主页](https://www.cnblogs.com/fivestudy/)  
 
 ### 目录  
