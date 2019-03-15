@@ -14,3 +14,4 @@
 * [你真的了解字典(Dictionary)吗?从一道亲身经历的面试题说起](https://www.cnblogs.com/CoderAyu/p/10360608.html)  
 * [剑指 offer 第一题： 二维数组中的查找](https://www.cnblogs.com/fivestudy/p/10437229.html)  
 * [剑指offer：调整数组顺序使奇数位于偶数前面](https://www.cnblogs.com/bianchengzhuji/p/10458251.html)  
+* [几道和散列（哈希）表有关的面试题](https://www.cnblogs.com/fivestudy/p/10537611.html)  
