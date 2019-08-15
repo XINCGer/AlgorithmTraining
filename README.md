@@ -11,6 +11,7 @@
 >* [最短路径](https://github.com/XINCGer/AlgorithmTraining/tree/master/shortest_path)
 >* [树](https://github.com/XINCGer/AlgorithmTraining/tree/master/tree)  
 >* [Hash(哈希)](./hash)  
+>* [DP动态规划](./DP)  
 >* [更多其他算法](https://github.com/XINCGer/AlgorithmTraining/tree/master/Morepractices)  
 >* [游戏常用算法](https://github.com/XINCGer/AlgorithmTraining/tree/master/GameAlgorithm)  
 >* [LeetCode刷题记录](./leetcode)  
