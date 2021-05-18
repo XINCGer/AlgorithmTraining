@@ -1,7 +1,8 @@
 # AlgorithmTraining
 算法训练，包括《啊哈算法》中的算法和常用游戏算法。
 
-## 目录
+## 目录  
+>* [LeetCode 刷题攻略](https://github.com/youngyangyang04/leetcode-master)  
 >* [排序算法训练](https://github.com/XINCGer/AlgorithmTraining/tree/master/sort)
 >* [栈&队列&链表](https://github.com/XINCGer/AlgorithmTraining/tree/master/stack%26queue%26linklist)
 >* [自制简单字符串分割函数](https://github.com/XINCGer/AlgorithmTraining/tree/master/StringSlipt)
