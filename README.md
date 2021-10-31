@@ -22,3 +22,4 @@
 >* [常见数据结构与算法整理总结（上）](https://mp.weixin.qq.com/s/oY6uZhEpK2EviC33RiotkA)  
 >* [常见数据结构与算法整理总结（下）](https://mp.weixin.qq.com/s/hQ8VyMpgpMuTPC9ANDTqaQ)  
 >* [5分钟学算法系列](./AlgorithmIn5Min)  
+>* [《算法新解电子版》](https://github.com/liuxinyu95/AlgoXY)  
